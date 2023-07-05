@@ -28,25 +28,6 @@
     background-size:cover;
 }
 
-.badge1{
-    position: absolute;
-    ;
-    background-image: url(Badge1.png);
-    background-repeat: no-repeat
-}
-
-.badge2{
-    position: absolute;
-    size: 50%;
-    background: url(Badge2.png);
-    background-repeat: no-repeat
-}
-
-.badge3{
-    background: url(Badge3.png);
-    background-size: 50%;
-}
-
 .Slogan{
     font-weight: bold;
     font-size: 30px;
