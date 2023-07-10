@@ -94,7 +94,7 @@
 .w-100{
     margin: 0cm;
     max-width: 13cm !important;
-    height: 100% !important;
+    height: 12cm !important;
 }
 .w-101{
     width: 100% !important;
@@ -177,7 +177,7 @@
     margin: 0;
 }
 .row {
-    --bs-gutter-x: 1.5rem;
+    --bs-gutter-x: 1.0rem;
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
