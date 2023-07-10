@@ -218,3 +218,12 @@
   .accordion-item:nth-child(-n+2) {
     border-bottom: 1px solid white;
 }
+
+#navbar {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.navbar-scroll {
+    transform: translateY(-100%);
+}
