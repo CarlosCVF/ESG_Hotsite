@@ -7,9 +7,9 @@
     <title>Jornada ESG</title>
     <link rel="stylesheet" href="static/css/template.css">
     <link href="static/images/Logo.png" rel="shortcut icon" type="image/x-icon">
-    <script src="static/scripts/script.js" defer></script>
     <script src="static/scripts/scriptMapa.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="static/scripts/spotlight.bundle.js" type="text/javascript" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
@@ -17,7 +17,7 @@
 
 <body data-bs-spy="scroll" data-bs-target="#navbarCollapse">
     <div id="fixedNavWrapper">
-        <nav class="navbar navbar-expand-lg bg-image-bar navbar-dark fixed-top bg-dark" id="navbar">
+        <nav class="navbar navbar-expand-lg bg-image-bar navbar-dark fixed-top bg-dark">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
@@ -25,6 +25,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
                         <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#galeria" class="nav-item nav-link active">Galeria</a>
                         <a href="#palestrantes" class="nav-item nav-link">Palestrantes</a>
                         <a href="#programacao" class="nav-item nav-link">Programação</a>
                         <a href="#manifesto" class="nav-item nav-link">Manifesto</a>
@@ -39,17 +40,31 @@
     </div>
 
     <div class="background-image" id="home">
-        <div class="container pb-4 foto" style="min-height: 15vh;padding-top: 30%;padding-bottom: 220%;"></div>
-        <div class="text-center ta">
-            <h3 class="Slogan">Participe deste movimento de pioneirismo rumo à construção <br> de um porto mais sustentável para a comunidade!</h3>
+        <div class="container pb-4" style="padding-top: 28%"></div>
+        <div class="text-center ta" style="padding-top: 20px;padding-bottom: 10px;">
+            <h3 class="Slogan" style="color: white;">Obrigado por participar do movimento de pioneirismo rumo à construção <br> de um porto mais sustentável para a comunidade!</h3>
         </div>
-        <br>
-        <div style="text-align: center;">
-            <a href="https://forms.office.com/r/UsXCFpR4N3" target="_blank">
-                <button type="button" class="btn btn-success" style="--bs-btn-padding-y: 25px; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 25px;">Faça sua inscrição!</button>
-            </a>
+    </div>
+    <div class="FundoProg gallery" id="galeria">
+        <div class="col-md-12" style="text-align: center;">
+            <h2 class="ta1" style="padding-top: 30px; margin-bottom: 20px;">Galeria de fotos</h2>
+            <div id="janelaFotos" class="janela-oculta" style=" margin-right: 300px;margin-left: 300px;text-align: center">
+                <a class="spotlight" href="static/images/Foto1A.jpg"><img class="galeriafoto" src="static/images/Foto1A.jpg"></a>
+                <a class="spotlight" href="static/images/Foto2A.jpg" target="_blank"><img class="galeriafoto" src="static/images/Foto2A.jpg"></a>
+                <a class="spotlight" href="static/images/Foto3A.jpg" target="_blank"><img class="galeriafoto" src="static/images/Foto3A.jpg"></a>
+                <a class="spotlight" href="static/images/Foto4A.jpg" target="_blank"><img class="galeriafoto" src="static/images/Foto4A.jpg"></a>
+                <a class="spotlight" href="static/images/Foto5A.jpg" target="_blank"><img class="galeriafoto" src="static/images/Foto5A.jpg"></a>
+                <a class="spotlight" href="static/images/Foto6A.jpg" target="_blank"><img class="galeriafoto" src="static/images/Foto6A.jpg"></a>
+                <a class="spotlight" href="static/images/Foto7A.jpg" target="_blank"><img class="galeriafoto" src="static/images/Foto7A.jpg"></a>
+                <a class="spotlight" href="static/images/Foto8A.jpg" target="_blank"><img class="galeriafoto" src="static/images/Foto8A.jpg"></a>
+                <a class="spotlight" href="static/images/Foto9A.jpg" target="_blank"><img class="galeriafoto" src="static/images/Foto9A.jpg"></a>
+                <a class="spotlight" href="static/images/Foto10A.jpg" target="_blank"><img class="galeriafoto" src="static/images/Foto10A.jpg"></a>
+                <a class="spotlight" href="static/images/Foto11A.jpg" target="_blank"><img class="galeriafoto" src="static/images/Foto11A.jpg"></a>
+                <a class="spotlight" href="static/images/Foto12A.jpg" target="_blank"><img class="galeriafoto" src="static/images/Foto12A.jpg"></a>
+            </div>
         </div>
-        <br>
+    </div>
+    <div class="background-image1" id="palestrantes">
         <!-- Programção estava aqui -->
         <div class="container pb-4 pt-4 text-center ta" id="palestrantes">
             <h2 class="ta1" style="padding-top: 30px;">Palestrantes</h2>
@@ -59,11 +74,12 @@
                 <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
                     <div class="image-container">
                         <img src="static/images/AndersonPomini.jpg" class="w-100">
-                        <div class="mask"></div>
+                        
                         <div class="bottom-left">
                             <h4>Anderson Pomini</h4>
                             <p>Presidente</p>
                             <p>APS</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -71,7 +87,7 @@
                 <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
                     <div class="image-container">
                         <img src="static/images/Gabriela_Otero.jpg" class="w-100">
-                        <div class="mask"></div>
+                     
                         <div class="bottom-left">
                             <h4>Gabriela Otero</h4>
                             <p>Blue Keepers Project Coordinator</p>
@@ -83,25 +99,9 @@
                         </div>
                     </div>
                 </div>
-                <!--
+            
                 <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
-                    <div class="image-container">
-                        <img src="static/images/Marcos_Liborio.jpg" class="w-100">
-                        <div class="mask"></div>
-                        <div class="bottom-left">
-                            <h4>Marcos Libório</h4>
-                            <p>Secretário de Meio Ambiente</p>
-                            <p>Prefeitura Municipal de Santos</p>
-                            <a style="text-decoration: none;"
-                                href="https://www.linkedin.com/in/marcos-lib%C3%B3rio-95ba102b/" target="_blank">
-                                <img src="static/images/linkedin.png" style="max-width: 30%;">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                -->
-                <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
-                    <div class="image-container">
+                    <div class="image-container" >
                         <img src="static/images/Rubens_Filho.jpg" class="w-100">
                         <div class="mask"></div>
                         <div class="bottom-left">
@@ -154,7 +154,7 @@
                         <div class="mask"></div>
                         <div class="bottom-left">
                             <h4>Flavia Nico</h4>
-                            <p>Coordenadora Geral de Descentralização e Convênios</p>
+                            <p>Coord Geral de Descentralização e Convênios</p>
                             <p>Ministério de Portos e Aeroportos</p>
                             <a style="text-decoration: none;" href="https://www.linkedin.com/in/flavianico/"
                                 target="_blank">
@@ -163,51 +163,7 @@
                         </div>
                     </div>
                 </div>
-                <!--
-                <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
-                    <div class="image-container">
-                        <img src="static/images/Maite_Padovani_Leite.jpg" class="w-100">
-                        <div class="mask"></div>
-                        <div class="bottom-left">
-                            <h4>Maitê Padovani Leite</h4>
-                            <p>ESG</p>
-                            <p>USP</p>
-                            <a style="text-decoration: none;" href="https://www.linkedin.com/in/maitepadovanileite/"
-                                target="_blank">
-                                <img src="static/images/linkedin.png" style="max-width: 30%;">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
-                    <div class="image-container">
-                        <img src="static/images/Ligia_Ramos.jpg" class="w-100">
-                        <div class="mask"></div>
-                        <div class="bottom-left">
-                            <h4>Lígia Ramos</h4>
-                            <p>Regional Lead</p>
-                            <p>Global Compact Network Brazil</p>
-                            <a style="text-decoration: none;" href="https://www.linkedin.com/in/ligia-ramos1812/"
-                                target="_blank">
-                                <img src="static/images/linkedin.png" style="max-width: 30%;">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
-                    <div class="image-container">
-                        <img src="static/images/SidneiAranha.jpg">
-                        <div class="mask"></div>
-                        <div class="bottom-left">
-                            <h4>Sidnei Aranha</h4>
-                            <p>Superintendente de Meio Ambiente</p>
-                            <p>APS</p>
-                        </div>
-                    </div>
-                </div>
-                -->
+               
 
                 <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
                     <div class="image-container">
@@ -231,24 +187,12 @@
                         <div class="mask"></div>
                         <div class="bottom-left">
                             <h4>Monise Areias</h4>
-                            <p>Gerente</p>
+                            <p>Gerente de Ouvidoria</p>
                             <p>APS</p>
                         </div>
                     </div>
                 </div>
-                <!--
-                <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
-                    <div class="image-container">
-                        <img src="static/images/Eduardo_Hosakawa.jpg" class="w-100">
-                        <div class="mask"></div>
-                        <div class="bottom-left">
-                            <h4>Eduardo Kimoto Hosokawa</h4>
-                            <p>Vice-coordenador</p>
-                            <p>CMMC</p>
-                        </div>
-                    </div>
-                </div>
-                -->
+             
                 <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
                     <div class="image-container">
                         <img src="static/images/LuisCarlos2.jpg" class="w-100">
@@ -281,11 +225,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
                     <div class="image-container">
-                        <img src="static/images/Torquato_Jardim2.jpg" class="w-100">
+                        <img src="static/images/Torquato_Jardim.jpg" class="w-100">
                         <div class="mask"></div>
                         <div class="bottom-left">
                             <h4>Torquato Jardim</h4>
-                            <p>Ministro da Justiça</p>
+                            <p> Ex Ministro da Justiça</p>
                             <p>Governo Federal</p>
                             <a style="text-decoration: none;"
                                 href="https://www.linkedin.com/in/torquato-jardim-9b0b7926b/" target="_blank">
@@ -315,7 +259,7 @@
                         <div class="mask"></div>
                         <div class="bottom-left">
                             <h4>Débora Abreu</h4>
-                            <p>Gerente de Corregedoria</p>
+                            <p>Gerende de Corregedoria</p>
                             <p>APS</p>
                             <a style="text-decoration: none;"
                                 href="https://www.linkedin.com/in/debora-de-oliveira-abreu-teleginski-469ba6143/" target="_blank">
@@ -324,7 +268,78 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
+                    <div class="image-container">
+                        <img src="static/images/fabigomx.jpg" class="w-100">
+                        <div class="mask"></div>
+                        <div class="bottom-left">
+                            <h4>Fabiana Gomes</h4>
+                            <p>Diretora de Sustentabilidade</p>
+                            <p>Hidrovias do Brasil</p>
+                            <a style="text-decoration: none;"
+                                href="https://www.linkedin.com/in/fabiana-gomes-7499b725/" target="_blank">
+                                <img src="static/images/linkedin.png" style="max-width: 30%;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
+                    <div class="image-container">
+                        <img src="static/images/aranha2.jpg" class="w-100">
+                        <div class="mask"></div>
+                        <div class="bottom-left">
+                            <h4>Sidnei Aranha</h4>
+                            <p>Superintendente de Meio Ambiente</p>
+                            <p>APS</p>
+                            <a style="text-decoration: none;"
+                                href="" target="_blank">
+                               
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
+                    <div class="image-container">
+                        <img src="static/images/ligia.jpg" class="w-100">
+                        <div class="mask"></div>
+                        <div class="bottom-left">
+                            <h4>Lígia Ramos</h4>
+                            <p>Regional Lead SBTi</p>
+                            <p>Global Compact Network Brazil</p>
+                            <a style="text-decoration: none;"
+                                href="https://www.linkedin.com/in/ligia-ramos1812/" target="_blank">
+                                <img src="static/images/linkedin.png" style="max-width: 30%;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
+                    <div class="image-container">
+                        <img src="static/images/AnaCarolina.jpg" class="w-100">
+                        <div class="mask"></div>
+                        <div class="bottom-left">
+                            <h4>Ana Carolina Camara</h4>
+                            <p>Diretora de projetos</p>
+                            <p>GIZ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 left-wrapper mx-auto">
+                    <div class="image-container">
+                        <img src="static/images/BrunoTakano1.jpg" class="w-100">
+                        <div class="mask"></div>
+                        <div class="bottom-left">
+                            <h4>Bruno Takano</h4>
+                            <p>Gerente de Sustentabilidade</p>
+                            <p>APS</p>
+                            <a style="text-decoration: none;"
+                                href="https://www.linkedin.com/in/bruno-fernandes-takano-66070834/" target="_blank">
+                                <img src="static/images/linkedin.png" style="max-width: 30%;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    
             </div>
         </div>
         <br>
@@ -345,16 +360,12 @@
                   </h2>
                   <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body" style="text-align: left; color: rgb(9, 29, 66);">
-                        <strong>13:00 - Abertura do Evento/Palavras iniciais</strong><br><br>
-                        <strong>13:15 - Painel: Economia azul <br>Mediador:</strong><br>Rubens Filho(Coordenador da Plataforma Água e Oceano do Pacto Global da ONU) <br><strong>Painelistas:</strong><br>Sidnei Aranha(APS) <br>Gabriela Otero(BlueKeepers/Pacto Global)<br>Ronaldo Christofoletti(UNIFESP) <br><br>
-                        <strong>14:15 - Palestra: Patrocínios como ferramenta de transformação comunitária <br>Palestrantes:</strong><br>Thais Polidoro(Instituto Elos)<br><br>
-                        <strong>15:15 - Coffe-Break</strong><br><br>
-                        <strong>15:45 - Painel: Plataforma anticorrupção do PactoGlobal <br>Mediador:</strong><br>Luis Carlos Szymonowicz<br><strong>Painelistas:</strong><br>Lucas Caiado<br>Luiz Guedes<br>Torquato Jardim<br><br>
-                        <strong>16:45 - Manifesto</strong><br><br>
+                        <strong>13:00 - Abertura do Evento/Palavras iniciais</strong><br>Anderson Pomini (Presidente APS)<br><br>
+                        <strong>13:15 - Painel: Economia azul <br>Mediador:</strong><br>Gabriela Otero(BlueKeepers/Pacto Global) <br><strong>Painelistas:</strong><br>Sidnei Aranha(APS) <br>Rubens Filho(Coordenador da Plataforma Água e Oceano do Pacto Global da ONU)<br>Ronaldo Christofoletti(UNIFESP) <br><br>
+                        <strong>14:15 - Palestra: Patrocínios como ferramenta de transformação comunitária <br>Palestrantes:</strong><br>Valdeci Souza Rocha (Instituto Elos)<br><br>
+                        <strong>15:45 - Painel: A importancia do ESG para as empresas<br>Mediador:</strong><br>Luis Carlos Szymonowicz<br><strong>Painelistas:</strong><br>Lucas Caiado<br>Luiz Guedes<br>Torquato Jardim<br><br>
+                        <strong>16:45 - Assinatura: Manifesto ESG do Porto de Santos</strong><br><br>
                         <strong>17:00 - Encerramento</strong><br><br><br>
-                        <a href="static/pdf/Programacao01_08.pdf" |safe target="_blank">
-                            <button type="button" class="btn btn-success" style="--bs-btn-padding-y: 15px; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 15px;">Baixe a Programação!</button>
-                        </a>
                     </div>
                   </div>
                 </div>
@@ -367,11 +378,7 @@
                   <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body" style="text-align: left;color: rgb(9, 29, 66);">
                         <strong>14:00 - Painel: Liderança feminina e equidade na gestão <br>Mediador:</strong><br>Monise Areias(APS)<br><strong>Painelistas</strong><br>Daniela Manole(IBGC)<br>Flavia Nico(MPor)<br><br>
-                        <strong>15:00 - Palestra: Programa "Porto na Escola"</strong><br><strong>Palestrante:</strong><br>Membro do GT + PMS(SEDUC)<br><br>
-                        <!--<strong>16:00 - Palestra: Ecovias - ver nome</strong><br><strong>Palestrante:</strong><br>Wilson Siqueira(Ecovias)<br><br><br>-->
-                        <a href="static/pdf/Programacao02_08.pdf" |safe target="_blank">
-                            <button type="button" class="btn btn-success" style="--bs-btn-padding-y: 15px; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 15px;">Baixe a Programação!</button>
-                        </a>
+                        <strong>15:00 - Palestra: Lançamento do edital de patrocinios sociais APS.</strong><br><strong>Palestrante:</strong><br>Dennis Silva(APS)<br><br>
                     </div>
                   </div>
                 </div>
@@ -383,37 +390,19 @@
                   </h2>
                   <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body" style="text-align: left;color: rgb(9, 29, 66);">
-                        <strong>14:00 - Painel: Ação e inovação em mudanças climáticas<br>Mediador:</strong><br>Maria Gontijo(UNISANTA)<br><strong>Painelistas:</strong><br>Eduardo Hosakawa(CMMC)<br>Maitê Leite(Pacto Global)<br>Lígia Ramos(SBTi)<br>José Neto(Antaq)<br>
-                        <!--<strong>15:00 - Painel: Transparência das Relações Público-Privadas<br>Painelistas:</strong><br>A definir<br><br>
-                        <strong>16:00 - Possível publicação de edital de patrocínios</strong><br>A definir<br><br>-->
-                        <strong>16:30 - Encerramento</strong><br><br><br>
-                        <a href="static/pdf/Programacao03_08.pdf" |safe target="_blank">
-                            <button type="button" class="btn btn-success" style="--bs-btn-padding-y: 15px; --bs-btn-padding-x: .5rem; --bs-btn-font-size: 15px;">Baixe a Programação!</button>
+                        <strong>14:00 - Painel: Ação e inovação em mudanças climáticas<br>Mediador:</strong><br>Maria Gontijo(UNISANTA)<br><strong>Painelistas:</strong><br>Ligia Ramos(SBTi - Science Based Targets initiative)<br>Ana Carolina Câmara(GIZ - Gesellschaft für internationale Zusammenarbeit)<br>Bruno Takano(APS)<br><br>
+                        <strong>15:00 - Painel: Transparência das Relações Público-Privadas<br>Painelistas:</strong><br>Monise Areias(APS)<br>Debora Abreu(APS)<br>Fabiana Gomes(Hidrovias do Brasil)<br><br>
+                        <strong>16:00 - Encerramento</strong><br><br><br>
                         </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!--
-            <div class="row pt-5">-->
-                <!-- Colocar uma função para que quando clicar, abaixe um texto da programação-->
-                <!--<div class="badge1"></div>
-                <div class="col-md-4">
-                    <a href="static/pdf/Programacao01_08.pdf" |safe class="pdf letrafaixa" target="_blank"> 01/08</a>
-                </div>
-                <div class="col-md-4">
-                    <a href="static/pdf/Programacao02_08.pdf" |safe class="pdf letrafaixa" target="_blank"> 02/08</a>
-                </div>
-                <div class="col-md-4">
-                    <a href="static/pdf/Programacao03_08.pdf" |safe class="pdf letrafaixa" target="_blank"> 03/08</a>
-                </div>
-                <div class="badge2"></div>
-            </div>-->
         <br><br>
     </div>
 
-    <div class="background-image">
+    <div class="background-image1">
         <div class="container pb-4 pt-4 text-center ta" id="manifesto">
             <h2 class="ta1" style="padding-top: 30px;">Manifesto</h2>
         </div>
@@ -421,51 +410,167 @@
             <div class="text-center col-md-12">
                 <h3 style="font-size: 27px;margin-left: 80px;margin-right: 80px;">O Porto de Santos reconhece a importância dos princípios ambientais, sociais e de governança corporativa (ESG) para o desenvolvimento sustentável e a responsabilidade corporativa e assume o compromisso, por meio de sua Autoridade Portuária de Santos e demais empresas, de adotar e promover práticas alinhadas com esses valores, com os princípios do Pacto Global e com a Agenda 2030 da Organização das Nações Unidas (ONU). O Porto de Santos acredita que a adoção de medidas ESG, além de fortalecer sua posição no mercado, contribui para um futuro mais sustentável e inclusivo. </h3>
             </div>
-        </div>
-    </div>
-    <div class="contador ta background-image2" id="inscricoes">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="contador ta" id="contador">
-                    <h1 class="ta1 letrafaixa" style="padding-top: 50px;text-align: center;">O evento começa em:</h1>
-                    <div class="countdown-container" style="text-align:center">
-                        <div class="countdown-el days-c">
-                            <p class="text letrafaixa" id="days">0</p>
-                            <span class="letrafaixa">Dias</span>
-                        </div>
-                        <div class="countdown-el hours-c">
-                            <p class="text letrafaixa" id="hours">0</p>
-                            <span class="letrafaixa">Horas</span>
-                        </div>
-                        <div class="countdown-el mins-c">
-                            <p class="text letrafaixa" id="mins">0</p>
-                            <span class="letrafaixa">Minutos</span>
-                        </div>
-                        <div class="countdown-el secs-c">
-                            <p class="text letrafaixa" id="secs">0</p>
-                            <span class="letrafaixa">Segundos</span>
-                        </div>
+            <div class="container pt-1 pb-1 text-center" id="entidades">
+                <h3 class="ta2" style="padding-top: 20px;">Entidades Participantes</h3>
+                <div class="row justify-content-center align-items-center entidades-row">
+                    
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt" src="static/images/age.png">
+                    </div>
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt1" src="static/images/hidro.png">
+                    </div>
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt" src="static/images/eco.png">
+                    </div>
+                </div>
+            
+                <div class="row justify-content-center align-items-center entidades-row">
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt" src="static/images/SantosBrasil.png">
+                    </div>
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt" src="static/images/Selo-25anos.png">
+                    </div>
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt" src="static/images/logo_transbrasa_azul.png">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center entidades-row">
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt" src="static/images/citrosuco-01.png">
+                    </div>
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt1" src="static/images/CONCAIS_Logo.png">
+                    </div>
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt1" src="static/images/AF_LOGO_COPERSUCAR_PRINCIPAL_CROMIA.png">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center entidades-row">
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt" src="static/images/Logo - Adonai terminal de liíquidos.png">
+                    </div>
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt" src="static/images/Logo - Grupo ABA Infra.png">
+                    </div>
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt2" src="static/images/Logo_CLI.png">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center entidades-row">
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt2" src="static/images/LogoCesari.png">
+                    </div>
+
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt" src="static/images/Terminal39.png">
+                    </div>
+
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt" src="static/images/LogoACS.png">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center entidades-row">
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt1" src="static/images/logoAbtra.png">
+                    </div>
+
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt3" src="static/images/LogoCubatao.png">
+                    </div>
+
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt3" src="static/images/LogoSantos.png">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center entidades-row">
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt2" src="static/images/LogoBTP.png">
+                    </div>
+
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt" src="static/images/LogoGuaruja.png">
+                    </div>
+
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt3" src="static/images/LogoGranQui.png">
+                    </div>
+                </div>
+
+                <div class="row justify-content-center align-items-center entidades-row">
+            
+                    <div class="col-4 col-md-3 entidade-item">
+                        <img class="logoEnt4" src="static/images/LogoSaoVicente.png">
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="inscricoes">
-                    <h2 class="pb-3 letrafaixa" style="font-weight: bold; padding-top:50px;text-align: center;">
-                        Inscreva-se nessa incrível Jornada</h2>
-                    <div style="text-align: center;">
-                        <div style="padding-top: 1cm;">
-                            <a href="https://forms.office.com/r/UsXCFpR4N3"
-                                target="_blank">
-                                <button type="button" class="btn btn-success btn-lg">Clique aqui!</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            
+    </div>
+    <!--RETIRAR-->
+    <div class="FundoProg">
+        <div class="col-md-12" style="text-align: center;">
+            <h2 class="ta1" style="padding-top: 30px;">Palestras e Debates</h2>
+        </div>
+        <div class="row" style="text-align: center;">
+            <div class="Palestras1 col-md-3">
+                <a href="https://youtu.be/YHh6_utBho4?t=1513" target="_blank">
+                    <img src="static/images/Palestra1V.png" class="Palestras">
+                </a>
+                <h4>Painel: Economia Azul</h4>
+            </div>
+            <div class="Palestras1 col-md-3">
+                <a href="https://youtu.be/YHh6_utBho4?t=5534" target="_blank">
+                    <img src="static/images/Palestra2V.png" class="Palestras">
+                </a>
+                <h4>Palestra: Instituo Elos</h4>
+            </div>
+            <div class="Palestras1 col-md-3">
+                <a href="https://youtu.be/YHh6_utBho4?t=10623" target="_blank">
+                    <img src="static/images/Palestra3V.png" class="Palestras">
+                </a>
+                <h4>Painel: A importância do ESG para as empresas</h4>
+            </div>
+            <div class="Palestras1 col-md-3">
+                <a href="https://youtu.be/YHh6_utBho4?t=14673" target="_blank">
+                    <img src="static/images/Palestra4V.png" class="Palestras">
+                </a>
+                <h4>Assinatura: Manifesto ESG</h4>
+            </div>
+            <div class="Palestras1 col-md-3">
+                <a href="https://www.youtube.com/watch?v=hwmtacmV638&t=1s&ab_channel=PortodeSantosBR" target="_blank">
+                    <img src="static/images/Palestra5V.png" class="Palestras">
+                </a>
+                <h4>Dia 02/08: Virtual</h4>
+            </div>
+            <div class="Palestras1 col-md-3">
+                <a href="https://www.youtube.com/watch?v=S2_PjC3pA_E&ab_channel=PortodeSantosBR" target="_blank">
+                    <img src="static/images/Palestra5V.png" class="Palestras">
+                </a>
+                <h4>Dia 03/08: Virtual</h4>
             </div>
         </div>
-        <br><br>
-    </div>
-    </div>
+    <br><br>
+    </div> 
     <div class="background-image3">
         <div class="container pb-4 pt-4 text-center" id="jornada">
             <h2 class="pb-3 ta1" style="font-weight: bold; padding-top:30px;">I Jornada ESG</h2>
@@ -530,7 +635,7 @@
         </div>
         <br><br><br>
     </div>
-    <div class="background-image">
+    <div class="background-image1">
         <div class="container text-center" id="mural">
             <h2 class="ta1" style="padding-top: 30px;">Mural</h2>
             <div class="padlet-embed"
